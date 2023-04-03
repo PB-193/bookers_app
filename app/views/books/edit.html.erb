@@ -1,0 +1,39 @@
+
+
+  <div class="Edit-create">
+    <div class="Edit-title">
+      <h1>Editing Book</h1>
+    </div>
+    
+    <%= form_with model: @book do |f| %>
+    <div class="books-text">
+      <div class="error-message">  
+        <% if @book.errors.any? %>
+          <%= @book.errors.count %> error has occurred
+          <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>
+     </div>
+      
+      <div class="title-box">
+        <p>Title</p>
+        <%= f.text_field:title %>
+      </div>
+      <div class="body-box">
+        <p>Body</p>
+        <%= f.text_area:body %>
+      </div>
+      <div class="btn-box">
+        <%= f.submit "Update Book" %>
+      </div>
+    </div>
+    <% end %>
+    
+    <%= link_to "Show",book_path(@book) %>
+    |
+    <a class="#" href="/books">Back</a>
+    
+  </div>
