@@ -1,7 +1,5 @@
-
-
-  <div class="Edit-create">
-    <div class="Edit-title">
+ <div class="edit-create">
+    <div class="edit-title">
       <h1>Editing Book</h1>
     </div>
     
@@ -20,11 +18,15 @@
       
       <div class="title-box">
         <p>Title</p>
-        <%= f.text_field:title %>
+        <p>
+          <%= f.text_field:title %>
+        </p>
       </div>
       <div class="body-box">
         <p>Body</p>
-        <%= f.text_area:body %>
+        <p>
+          <%= f.text_area:body %>
+        </p>
       </div>
       <div class="btn-box">
         <%= f.submit "Update Book" %>
@@ -32,8 +34,8 @@
     </div>
     <% end %>
     
-    <%= link_to "Show",book_path(@book) %>
-    |
-    <a class="#" href="/books">Back</a>
-    
+    <div class="book-btn" >
+      <%= link_to "Show",book_path(@book),class:"btn btn-info" %>
+      <%= link_to "Back",books_path,class:"btn btn-info" %>
+    </div>
   </div>

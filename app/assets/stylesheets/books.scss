@@ -2,11 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+h1 {
+  margin-top:30px;
+}
+
+th {
+  font-size:15px;
+  text-align:center;
+}
+
+.books {
+  font-size:13px;
+}
+
+.index-btn {
+  width:10%;
+}
+
+.btn-box {
+  margin-bottom:20px;
+}
+
 .success-message {
-  font-size:20px;
+  margin-top:10px;
+  font-size:30px;
   color:green;
 }
 
 .error-message {
   color:red;
+}
+
+.book-btn {
+  margin-top:10px;
+}
+
+.edit-title {
+  margin-top:15px;
+}
+
+.title-box p {
+  font-size:30px;
+  text-align:left;
+  line-height:5px;
+}
+
+.body-box p {
+  font-size:30px;
+  text-align:left;
+  line-height:30px;
+}
+
+.show p {
+  font-size:30px;
 }
